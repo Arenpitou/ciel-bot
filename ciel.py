@@ -1,8 +1,10 @@
 from discord.ext.commands import Bot
 import random
+from ciel_settings import Settings
 
-BOT_PREFIX = ("c>", ">>", "!")
-TOKEN = "NDcwOTIzMTk4NDMxNzU2Mjg4.Djda3g.K5-v_gdsG5df6B8GlVj1U8X9_4g"
+TOKEN = Settings.CIEL_TOKEN
+
+BOT_PREFIX = ("c>", ">>")
 
 client = Bot(command_prefix=BOT_PREFIX)
 
@@ -11,7 +13,7 @@ async def eight_ball(context) :
     possible_responses = [
         "That is a no from me",
         "Not very likely",
-        "It's too hard to tell"
+        "It's too hard to tell",
         "It's quite possible",
         "Definitely"
     ]
